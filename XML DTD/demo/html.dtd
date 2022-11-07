@@ -1,0 +1,19 @@
+<!ELEMENT body (h1,p,div,form,table,br)*>
+<!ELEMENT h1 (#PCDATA)>
+<!ELEMENT p (#PCDATA)>
+<!ELEMENT div (#PCDATA)>
+<!ELEMENT form (input)*>
+<!ELEMENT input (#PCDATA)>
+<!ELEMENT table (th,tr)*>
+<!ELEMENT th (td)*>
+<!ELEMENT tr (td)*>
+<!ELEMENT td (#PCDATA)>
+<!ELEMENT br EMPTY>
+
+<!ATTLIST div id CDATA #REQUIRED>
+<!ATTLIST div class CDATA #IMPLIED>
+<!ATTLIST div name CDATA #IMPLIED>
+<!ATTLIST form method (post|get) #REQUIRED>
+<!ATTLIST input type (button|checkbox|color|date|submit) #REQUIRED>
+<!ATTLIST input value CDATA #REQUIRED>
+<!ATTLIST table class CDATA #IMPLIED>

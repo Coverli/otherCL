@@ -1,0 +1,52 @@
+<!-- RSS 2.0 DTD -->
+<!ELEMENT rss (channel)>
+<!ATTLIST rss version CDATA #FIXED "2.0">
+<!-- A channel can apparently either have one or more items, or just a title, link, and description of its own -->
+
+<!ELEMENT channel ((item+)|
+                   (title,link,description,(language|copyright|
+                    managingEditor|webMaster|pubDate|lastBuildDate|
+                    category|generator|docs|cloud|ttl|image|
+                    textInput|skipHours|skipDays)*))>
+
+<!ELEMENT item ((title|description)+,link?,
+                (author|category|comments|enclosure|guid|pubDate|source)*)>
+
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ATTLIST category domain CDATA #IMPLIED>
+<!ELEMENT cloud (#PCDATA)>
+<!ATTLIST cloud domain CDATA #IMPLIED
+                port CDATA #IMPLIED
+                path CDATA #IMPLIED
+                registerProcedure CDATA #IMPLIED
+                protocol CDATA #IMPLIED>
+<!ELEMENT comments (#PCDATA)>
+<!ELEMENT copyright (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT docs (#PCDATA)>
+<!ELEMENT enclosure (#PCDATA)>
+<!ATTLIST enclosure url CDATA #REQUIRED 
+                    length CDATA #REQUIRED 
+                    type CDATA #REQUIRED>
+<!ELEMENT generator (#PCDATA)>
+<!ELEMENT guid (#PCDATA)>
+<!ATTLIST guid isPermaLink (true|false) "true">
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT image (url,title,link,(width|height|description)*)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT lastBuildDate (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT managingEditor (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT pubDate (#PCDATA)>
+<!ELEMENT skipDays (#PCDATA)>
+<!ELEMENT skipHours (#PCDATA)>
+<!ELEMENT source (#PCDATA)>
+<!ATTLIST source url CDATA #REQUIRED>
+<!ELEMENT textInput (title,description,name,link)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT ttl (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT webMaster (#PCDATA)>
+<!ELEMENT width (#PCDATA)> 

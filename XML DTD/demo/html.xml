@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body SYSTEM "html.dtd">
+<body>
+    <h1>一号标题</h1>
+    <p>段落</p>
+    <div id="" class="" name=""></div>
+    <form method="post">
+        <input type="button" value=""/>
+        <input type="checkbox" value=""/>
+        <input type="color" value=""/>
+        <input type="date" value=""/>
+        <input type="submit" value=""/>
+    </form>
+    <table class="">
+        <th>
+            <td></td>
+        </th>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <br/>
+</body>

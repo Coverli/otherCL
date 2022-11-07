@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channal>
+        <title>网易云音乐</title>
+        <link>https://music.163.com</link>
+        <description>网易云首页</description>
+        
+        <item>
+            <!-- <title> - 定义项目的标题 -->
+            <title>每日音乐推荐</title>
+
+            <!-- <link> - 定义到达项目的超链接 -->
+            <link>https://music.163.com/#/discover/recommend/taste</link>
+
+            <!-- <description> - 描述此项目 -->
+            <description>根据个人喜好每日生成歌单</description>
+
+            <!-- <author> 元素规定 item 的作者的电子邮件地址 -->
+            <author>Coverli</author>
+
+            <!-- 
+                <category> 元素规定 channel 或 item 所属的一个或多个种类。<category> 元素也可以规定目录中的层级位置（<category> 元素的值是正斜杠分隔的字符串）
+                <category> 元素可以使RSS聚合器对站点/文章的目录进行归类群组（基于目录对站点/文章进行分组）
+                
+                <category> 标签有以下属性
+                domain	
+                可选。字符串或 URL，标识分类的分类法
+                    例子：<category domain="syndic8">IT</category>
+            -->
+            <category>RSS</category>
+
+            <!-- <comments> 元素允许一个 item 链接到关于该 item 的注释 -->
+            <comments>https://www.runoob.com/rss/rss-intro.html</comments>
+
+            <!-- 
+                <enclosure> 元素允许把媒体文件包含在项目中
+                
+                <enclosure>标签有以下属性
+                    length: 必需。定义媒体文件的长度（以字节计）
+                    type: 必需。定义媒体文件的类型
+                    url: 必需。定义指向该媒体文件的URL
+            -->
+            <enclosure url="http://www.runoob.com.cc/try/demo_source/movie.mp4" length="78645" type="video/mp4"/>
+
+            <!-- 
+                <guid> 元素为 item 定义一个唯一的标识符
+                注意： 聚合器必须把 guid 视为字符串。这里没有固定的语法规则。这取决于文档的创建者，来确定字符串的唯一性
+                
+                <guid> 元素有以下属性
+                    isPermaLink: 
+                        可选。如果设置为 true，那么阅读器会假定它是指向一个项的永久连接（指向由 元素描述的所有项目的 URL）。默认值是True。如果将其设置为 false，那么，guid 可能不会被假定为一个 URL
+            -->
+            <guid>http://www.runoob.com/rss/item0768</guid>
+
+            <!-- <pubDate> 元素定义此项目的最后发布日期 -->
+            <pubDate>2022 年 10 月 24 日</pubDate>
+
+            <!-- 
+                <source> 元素为此项目指定一个第三方来源
+                
+                <source> 元素有以下属性
+                    url: 必需。指定来源的链接
+            -->
+            <source url="http://www.runoob.com">runoob.com</source>
+        </item>
+    </channal>
+</rss>

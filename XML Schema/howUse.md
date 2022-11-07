@@ -1,0 +1,72 @@
+## XML 文档
+
+```xml
+<?xml version="1.0"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+```
+
+## DTD 文件
+
+```dtd
+<!ELEMENT note (to, from, heading, body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+```
+
+## XML Schema
+
+```scheme
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.w3schools.com"
+	xmlns="http://www.w3schools.com"
+	elementFormDefault="qualified">
+    <xs:element name="note">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="to" type="xs:string"/>
+          <xs:element name="from" type="xs:string"/>
+          <xs:element name="heading" type="xs:string"/>
+          <xs:element name="body" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>
+```
+
+## 对 DTD 的引用
+
+```dtd
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "http://www.w3schools.com/dtd/note.dtd">
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+```
+
+## 对 XML Schema 的引用
+
+```scheme
+<?xml version="1.0"?>
+<note xmlns="http://www.w3schools.com"
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://www.w3schools.com note.xsd">
+	<to>Tove</to>
+	<from>Jani</from>
+	<heading>Reminder</heading>
+	<body>Don't forget me this weekend!</body>
+</note>
+```
+
+
+

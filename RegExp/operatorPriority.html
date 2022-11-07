@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运算符优先级</title>
+    <style>
+        table.reference,table.tecspec{border-collapse:collapse;width:100%;margin-bottom:4px;margin-top:4px}table.reference .fa{font-size:24px}table.reference tr:nth-child(odd){background-color:#f6f4f0}table.reference tr:nth-child(even){background-color:#fff}table.reference tr.fixzebra{background-color:#f6f4f0}table.reference th{color:#fff;background-color:#555;border:1px solid #555;font-size:13px;padding:3px;vertical-align:top;text-align:left}table.reference th a:link,table.reference th a:visited{color:#fff}table.reference th a:active,table.reference th a:hover{color:#ee872a}tr td:first-child{min-width:25px}table.reference td{line-height:2em;min-width:24px;border:1px solid #d4d4d4;padding:5px;padding-top:7px;padding-bottom:7px;vertical-align:top}table.reference td.example_code{vertical-align:bottom}
+    </style>
+</head>
+<body>
+    <p>正则表达式从左到右进行计算，并遵循优先级顺序，这与算术表达式非常类似。</p>
+    <p>相同优先级的从左到右进行运算，不同优先级的运算先高后低。下表从最高到最低说明了各种正则表达式运算符的优先级顺序：</p>
+    <table class="reference">
+        <tr>
+            <th width="20%">运算符</th>
+            <th width="80%">描述</th>
+        </tr>
+        <tr>
+            <td>\</td>
+            <td>转义符</td>
+        </tr>
+        <tr>
+            <td>(), (?:), (?=), []</td>
+            <td>圆括号和方括号</td>
+        </tr>
+        <tr>
+            <td>*, +, ?, {n}, {n,}, {n,m}</td>
+            <td>限定符</td>
+        </tr>
+        <tr>
+            <td>^, $, \任何元字符、任何字符</td>
+            <td>定位点和序列（即：位置和顺序）</td>
+        </tr>
+        <tr>
+            <td>|</td>
+            <td>
+                替换，"或"操作<br />
+                字符具有高于替换运算符的优先级，使得"m|food"匹配"m"或"food"。若要匹配"mood"或"food"，请使用括号创建子表达式，从而产生"(m|f)ood"。
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

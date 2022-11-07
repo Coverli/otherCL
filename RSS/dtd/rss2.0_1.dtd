@@ -1,0 +1,26 @@
+<!ELEMENT rss (channel)>
+<!ATTLIST rss
+version (2.0) #REQUIRED
+xmlns:dc CDATA #IMPLIED
+xmlns:trackback CDATA #IMPLIED
+xmlns:wfw CDATA #IMPLIED
+xmlns:slash CDATA #IMPLIED
+xmlns:geo CDATA #IMPLIED
+xmlns:creativeCommons CDATA #IMPLIED
+xmlns:feedburner CDATA #IMPLIED
+>
+
+<!ELEMENT channel (title,link,language?,descriptiong,copyright,generator,webMaster,item+)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT descriptiong (#PCDATA)>
+<!ELEMENT copyright (#PCDATA)>
+<!ELEMENT generator (#PCDATA)>
+<!ELEMENT webMaster (#PCDATA)>
+<!ELEMENT item (title,link,author,pubDate,description)>
+<!ELEMENT item:title (#PCDATA)>
+<!ELEMENT item:link (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT pubDate (#PCDATA)>
+<!ELEMENT description (#PCDATA)>

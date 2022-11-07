@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>网易云音乐</title>
+        <link>https://music.163.com</link>
+        <description>网易云首页</description>
+        <item>
+            <title>每日音乐推荐</title>
+            <link>https://music.163.com/#/discover/recommend/taste</link>
+            <description>根据个人喜好每日生成歌单</description>
+        </item>
+
+        <!-- 
+            <category> 子元素用于为 feed 规定种类
+            <category> 子元素使 RSS 聚合器基于类别对网站进行分组成为可能
+         -->
+        <category>music</category>
+
+        <!-- <copyright> 子元素会告知有关版本资料的信息 -->
+        <copyriight>网易公司版权所有©1997-2022</copyriight>
+
+        <!-- 
+            <image> 子元素可在聚合器提供某个 feed 时显示一幅图像
+            <image> 有三个必需的子元素：
+                <url> - 定义引用图像的 URL
+                <title> - 定义图像无法被显示时显示的文本
+                <link> - 定义到达提供此频道的网站的超链接
+        -->
+        <image>
+            <url>http://www.runoob.com/images/logo.png</url>
+            <title>菜鸟教程</title>
+            <link>http://www.runoob.com</link>
+        </image>
+
+        <!-- 
+            <language> 子元素用于规定用来编写文档的语言
+            <language> 元素使 RSS 聚合器基于语言来对网站进行分组成为可能
+        -->
+        <language>zh-cn</language>
+
+        <!-- 
+            <cloud> 元素允许所有进程注册一个 cloud，用于获得频道的更新通知，
+            并为 rss 种子实现一个轻量级的发布订阅协议
+            注意：xml-rpc 或 soap 均可实现 cloud
+        -->
+        <cloud domain="www.runoob.com" port="80" path="/RPC" registerProcedure="NotifyMe" protocol="xml-rpc" />
+
+        <!-- 
+            <docs> 元素规定指向当前 RSS 文件所用格式说明的 URL。
+        -->
+        <docs>https://cyber.harvard.edu/rss/rss.html</docs>
+
+        <!-- 
+            <generator> 元素规定用于生成该 RSS feed 的程序名称。
+        -->
+        <generator>VSCode</generator>
+
+        <!-- <lastBuildDate> 元素定义 feed 内容的最后修改日期 -->
+        <lastBuildDate>2022 年 10 月 22 日</lastBuildDate>
+
+        <!-- <managingEditor> 元素定义 feed 内容编辑的电子邮件地址 -->
+        <managingEditor>editor@runoob.com</managingEditor>
+
+        <!-- <pubDate> 元素为 feed 的内容定义最后发布日期 -->
+        <pubDate>2022 年 10 月 24 日</pubDate>
+
+        <!-- <rating> 元素定义 feed 的 PICS 级别。 -->
+        <rating></rating>
+
+        <!-- <skipDays> 元素规定在那些天，聚合器忽略更新 feed -->
+        <skipDays>
+            <day>星期六</day>
+            <day>星期天</day>
+        </skipDays>
+
+        <!-- <skipHours> 元素规定在那些小时，聚合器忽略更新 feed -->
+        <skipHours>
+            <hour>0</hour>
+            <hour>6</hour>
+            <hour>7</hour>
+            <hour>17</hour>
+            <hour>23</hour>
+        </skipHours>
+
+        <!-- <textinput> 元素规定应当与 feed 一同显示的文本输入域 -->
+        <textinput>
+            <!-- <description>元素必需。定义对文本输入域的描述 -->
+            <description>搜索内容</description>
+
+            <!-- <title> 元素必需。定义文本输入域中的提交按钮的标注 (label) -->
+            <title>搜索</title>
+
+            <!-- <link>	元素必需。定义处理文本输入的 CGI 脚本的 URL -->
+            <link>https://www.runoob.com/</link>
+
+            <!-- <name>	元素必需。定义在文本输入域中的文本对象的名称 -->
+            <name>s</name>
+        </textinput>
+
+        <!-- <ttl> (ttl=time to live) 元素指定在 feed 源更新此 feed 之前，feed 可被缓存的分钟数 -->
+        <ttl>60</ttl>
+
+        <!-- <webMaster> 元素定义 feed 网络管理员的电子邮件地址 -->
+        <webMaster>webmaster@runoob.com</webMaster>
+    </channel>
+</rss>

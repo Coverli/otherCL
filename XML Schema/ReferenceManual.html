@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XML Scheme参考手册</title>
+    <style>
+        table.reference,table.tecspec{border-collapse:collapse;width:100%;margin-bottom:4px;margin-top:4px}table.reference .fa{font-size:24px}table.reference tr:nth-child(odd){background-color:#f6f4f0}table.reference tr:nth-child(even){background-color:#fff}table.reference tr.fixzebra{background-color:#f6f4f0}table.reference th{color:#fff;background-color:#555;border:1px solid #555;font-size:13px;padding:3px;vertical-align:top;text-align:left}table.reference th a:link,table.reference th a:visited{color:#fff}table.reference th a:active,table.reference th a:hover{color:#ee872a}tr td:first-child{min-width:25px}table.reference td{line-height:2em;min-width:24px;border:1px solid #d4d4d4;padding:5px;padding-top:7px;padding-bottom:7px;vertical-align:top}table.reference td.example_code{vertical-align:bottom}
+    </style>
+</head>
+<body>
+    <h2>XSD 元素</h2>
+    <table class="reference">
+        <tbody>
+            <tr>
+                <th style="width:25%">元素</th>
+                <th style="width:75%">解释</th>
+            </tr>
+            <tr>
+                <td>all</td>
+                <td>规定子元素能够以任意顺序出现，每个子元素可出现零次或一次。</td>
+            </tr>
+            <tr>
+                <td>annotation</td>
+                <td>annotation 元素是一个顶层元素，规定 schema 的注释。</td>
+            </tr>
+            <tr>
+                <td>any</td>
+                <td>使创作者可以通过未被 schema 规定的元素来扩展 XML 文档。</td>
+            </tr>
+            <tr>
+                <td>anyAttribute</td>
+                <td>使创作者可以通过未被 schema 规定的属性来扩展 XML 文档。</td>
+            </tr>
+            <tr>
+                <td>appInfo</td>
+                <td>规定 annotation 元素中应用程序要使用的信息。</td>
+            </tr>
+            <tr>
+                <td>attribute</td>
+                <td>定义一个属性。</td>
+            </tr>
+            <tr>
+                <td>attributeGroup</td>
+                <td>定义在复杂类型定义中使用的属性组。</td>
+            </tr>
+            <tr>
+                <td>choice</td>
+                <td>仅允许在 &lt;choice&gt; 声明中包含一个元素出现在包含元素中。</td>
+            </tr>
+            <tr>
+                <td>complexContent</td>
+                <td>定义对复杂类型（包含混合内容或仅包含元素）的扩展或限制。</td>
+            </tr>
+            <tr>
+                <td>complexType</td>
+                <td>定义复杂类型。</td>
+            </tr>
+            <tr>
+                <td>documentation</td>
+                <td>定义 schema 中的文本注释。</td>
+            </tr>
+            <tr>
+                <td>element</td>
+                <td>定义元素。</td>
+            </tr>
+            <tr>
+                <td>extension</td>
+                <td>扩展已有的 simpleType 或 complexType 元素。</td>
+            </tr>
+            <tr>
+                <td>field</td>
+                <td>规定 XPath 表达式，该表达式规定用于定义标识约束的值。</td>
+            </tr>
+            <tr>
+                <td>group</td>
+                <td>定义在复杂类型定义中使用的元素组。</td>
+            </tr>
+            <tr>
+                <td>import</td>
+                <td>向一个文档添加带有不同目标命名空间的多个 schema。</td>
+            </tr>
+            <tr>
+                <td>include</td>
+                <td>向一个文档添加带有相同目标命名空间的多个 schema。</td>
+            </tr>
+            <tr>
+                <td>key</td>
+                <td>指定属性或元素值（或一组值）必须是指定范围内的键。</td>
+            </tr>
+            <tr>
+                <td>keyref</td>
+                <td>规定属性或元素值（或一组值）对应指定的 key 或 unique 元素的值。</td>
+            </tr>
+            <tr>
+                <td>list</td>
+                <td>把简单类型定义为指定数据类型的值的一个列表。</td>
+            </tr>
+            <tr>
+                <td>notation</td>
+                <td>描述 XML 文档中非 XML 数据的格式。</td>
+            </tr>
+            <tr>
+                <td>redefine</td>
+                <td>重新定义从外部架构文件中获取的简单和复杂类型、组和属性组。</td>
+            </tr>
+            <tr>
+                <td>restriction</td>
+                <td>定义对 simpleType、simpleContent 或 complexContent 的约束。</td>
+            </tr>
+            <tr>
+                <td>schema</td>
+                <td>定义 schema 的根元素。</td>
+            </tr>
+            <tr>
+                <td>selector</td>
+                <td>指定 XPath 表达式，该表达式为标识约束选择一组元素。</td>
+            </tr>
+            <tr>
+                <td>sequence</td>
+                <td>要求子元素必须按顺序出现。每个子元素可出现 0 到任意次数。</td>
+            </tr>
+            <tr>
+                <td>simpleContent</td>
+                <td>包含对 complexType 元素的扩展或限制且不包含任何元素。</td>
+            </tr>
+            <tr>
+                <td>simpleType</td>
+                <td>定义一个简单类型，规定约束以及关于属性或仅含文本的元素的值的信息。</td>
+            </tr>
+            <tr>
+                <td>union</td>
+                <td>定义多个 simpleType 定义的集合。</td>
+            </tr>
+            <tr>
+                <td>unique</td>
+                <td>指定属性或元素值（或者属性或元素值的组合）在指定范围内必须是唯一的。</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h2>XSD 限定/Facets </h2>
+    <table class="reference">
+        <tbody>
+            <tr>
+                <th>限定</th>
+                <th>描述</th>
+            </tr>
+            <tr>
+                <td>enumeration</td>
+                <td>定义可接受值的一个列表</td>
+            </tr>
+            <tr>
+                <td>fractionDigits</td>
+                <td>定义所允许的最大的小数位数。必须大于等于0。</td>
+            </tr>
+            <tr>
+                <td>length</td>
+                <td>定义所允许的字符或者列表项目的精确数目。必须大于或等于0。</td>
+            </tr>
+            <tr>
+                <td>maxExclusive</td>
+                <td>定义数值的上限。所允许的值必须小于此值。</td>
+            </tr>
+            <tr>
+                <td>maxInclusive</td>
+                <td>定义数值的上限。所允许的值必须小于或等于此值。</td>
+            </tr>
+            <tr>
+                <td>maxLength</td>
+                <td>定义所允许的字符或者列表项目的最大数目。必须大于或等于0。</td>
+            </tr>
+            <tr>
+                <td>minExclusive</td>
+                <td>定义数值的下限。所允许的值必需大于此值。</td>
+            </tr>
+            <tr>
+                <td>minInclusive</td>
+                <td>定义数值的下限。所允许的值必需大于或等于此值。</td>
+            </tr>
+            <tr>
+                <td>minLength</td>
+                <td>定义所允许的字符或者列表项目的最小数目。必须大于或等于0。</td>
+            </tr>
+            <tr>
+                <td>pattern</td>
+                <td>定义可接受的字符的精确序列。</td>
+            </tr>
+            <tr>
+                <td>totalDigits</td>
+                <td>定义所允许的阿拉伯数字的精确位数。必须大于0。</td>
+            </tr>
+            <tr>
+                <td>whiteSpace</td>
+                <td>定义空白字符（换行、回车、空格以及制表符）的处理方式。</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
